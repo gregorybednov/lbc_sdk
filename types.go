@@ -12,6 +12,12 @@ type CommiterTxBody struct {
 	CommiterPubKey string `json:"commiter_pubkey"`
 }
 
+type BeneficiaryTxBody struct {
+	Type string `json:"type"`
+	ID   string `json:"id"`
+	Name string `json:"name"`
+}
+
 type PromiseTxBody struct {
 	Type        string `json:"type"`
 	ID          string `json:"id"`
@@ -41,3 +47,5 @@ type SignedTx struct {
 	Body      any    `json:"body"` // TODO someday it should become less abstract
 	Signature string `json:"signature"`
 }
+
+
